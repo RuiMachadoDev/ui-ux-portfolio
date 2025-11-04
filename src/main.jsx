@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "./App.jsx";
 import ProjectDetail from "./pages/ProjectDetail.jsx";
 import ProjectDetailPizzeria from "./pages/ProjectDetailPizzeria.jsx";
-import ProjectDetailTokens from "./pages/ProjectDetailTokens.jsx"; // ← NOVO
+import ProjectDetailTokens from "./pages/ProjectDetailTokens.jsx";
 import "./index.css";
 
 createRoot(document.getElementById("root")).render(

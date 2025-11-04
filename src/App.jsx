@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 
 const ME = {
   name: "Rui Machado",
-  title: "UI/UX Designer",
-  pitch: "Passionate about Web & Mobile design",
-  email: "ola@ruimachado.design",
+  title: "Web Developer & UX/UI Designer",
+  pitch: "Passionate about Web & Design",
+  email: "ruifilipemachado@hotmail.com",
   location: "Portugal",
   about:
     "Hey, I’m Rui, a passionate UI/UX designer based in Porto. With over two years of experience in the web industry. I specialize in creating user-friendly web sites and web products that not only look good but also provide a intuitive user experience and user interface. My journey in design began with a fascination for how things work and a desire to improve the way people interact with technology. Since then, I’ve honed skills in user research, wireframing, prototyping, and visual design, working on projects that challenged and inspired me. I also build simple design systems and component libraries using variables and design tokens, keeping the UI consistent and easy to hand off to developers.",
@@ -57,7 +57,7 @@ const PROJECTS = [
 const CAREER = [
   {
     company: "CEiiA",
-    role: "UI/UX Designer + Frontend Developer",
+    role: "UI/UX Designer + Frontend Developer (Web)",
     period: "2023—2024",
     notes: [
       "User flows, wireframing, components creation with variables and responsive layouts, frontend implementation (React, Vue, Tailwind)",
@@ -68,7 +68,7 @@ const CAREER = [
     role: "UI/UX Designer + Frontend Developer",
     period: "2024—2025",
     notes: [
-      "Design System, components, variables, tokens, wireframing,frontend implementation (React, Vue, Tailwind)",
+      "Design System, components, variables, tokens, wireframing,frontend implementation (React, Vue, Tailwind, Node.js, PHP, Laravel)",
     ],
   },
   {
@@ -88,7 +88,6 @@ export default function App() {
   useEffect(() => {
     if (yearRef.current) yearRef.current.textContent = String(new Date().getFullYear());
 
-    // reveal on view
     const io = new IntersectionObserver(
       (entries) => {
         entries.forEach((e) => {
@@ -103,7 +102,6 @@ export default function App() {
     );
     document.querySelectorAll(".reveal, .stagger").forEach((el) => io.observe(el));
 
-    // smooth anchor scroll
     const click = (e) => {
       const a = e.target.closest("a[href^='#']");
       if (!a) return;
@@ -115,7 +113,6 @@ export default function App() {
     };
     document.addEventListener("click", click);
 
-    // horizontal scroll
     const track = trackRef.current;
     const getPanels = () => Array.from(track.querySelectorAll(".project-panel"));
     const clamp = (v, min, max) => Math.max(min, Math.min(max, v));
